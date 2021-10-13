@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/stylesheet.css" type="text/css" />
+
+</head>
+<body>
+    <header>
+        @Html.ActionLink("Index", "Index", "Home")
+        <br />
+        @Html.ActionLink("Bottle Amount Selector", "Razor", "Home")
+        <br />
+        @Html.ActionLink("Create Person", "CreatePerson", "Home")
+        <br />
+        Nicholas Gingras Welcome to my website
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <h2>Layout file</h2>
+        <p>A layout file is used to add the same information or objects to every page. In this case it will add my header and footer to every page</p>
+        <p>I put the css file into the views folder because it&#39;s used by views</p>
+        <p>I put the layout file in the views folder because it is a view</p>
+    </footer>
+</body>
+</html>

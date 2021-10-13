@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "../Shared/_Layout";
+    ViewData["Title"] = "Index";
+}
+
+<div id="song">
+
+</div>
+
+
+<script type="text/javascript">
+    var bottles = @ViewData["bottles"];
+    const songDiv = document.getElementById("song");
+    for (var i = bottles; i > 0; i--) {
+        const song1 = document.createElement("p");
+        song1.appendChild(document.createTextNode(i.toString() + " green bottles hanging on the wall,"));
+        const song2 = document.createElement("p");
+        song2.appendChild(document.createTextNode(i.toString() + " green bottles hanging on the wall,"));
+        const song3 = document.createElement("p");
+        song3.appendChild(document.createTextNode("And if one green bottle should accidentally fall,"));
+        const song4 = document.createElement("p");
+        song4.appendChild(document.createTextNode("There'll be " + (i - 1).toString() + " green bottles hanging on the wall,"));
+        song1.appendChild(song2);
+        song1.appendChild(song3);
+        song1.appendChild(song4);
+        songDiv.appendChild(song1); 
+    }
+</script>
+<form asp-controller="Home" asp-action="Razor">
+    <input type="submit" value="Play Again"/>
+</form>

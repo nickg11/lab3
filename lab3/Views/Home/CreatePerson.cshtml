@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "../Shared/_Layout";
+    ViewData["Title"] = "Index";
+}
+<form asp-controller="Home" asp-action="displayPerson" method="post">
+    <label>First Name:<input type="text" id="first" name="first" required /></label>
+    <label>Last Name:<input type="text" id="last" name="last" required /></label>
+    <label>Email:<input type="text" id="email" name="email" required /></label>
+    <label>Age:<input type="number" id="age" name="age" required /></label>
+    <label>Birth Date:<input type="datetime" id="DoB" name="DoB" /></label>
+    <label>Password:<input type="password" id="password" name="password" required /></label>
+    <label>Description:<input type="text" id="description" name="description" required /></label>
+    <input type="submit" />
+</form>

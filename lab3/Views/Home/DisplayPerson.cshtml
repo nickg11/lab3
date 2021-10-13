@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model lab3.models.Person;
+@{
+    Layout = "../Shared/_Layout";
+    ViewData["Title"] = "Index";
+}
+@Model.firstName = @ViewData["firstName"];
+@Model.lastName = @ViewData["lastName"];
+@Model.age = @ViewData["age"];
+@Model.email = @ViewData["email"];
+@Model.DoB = @ViewData["DoB"];
+@Model.description = @ViewData["description"];
+<table>
+    <tr>
+        <td>First Name: </td>
+        <td>@Model.firstName</td>
+    </tr>
+    <tr>
+        <td>Last Name: </td>
+        <td>@Model.lastName</td>
+    </tr>
+    <tr>
+        <td>Age: </td>
+        <td>@Model.age</td>
+    </tr>
+    <tr>
+        <td>Email Address: </td>
+        <td>@Model.email</td>
+    </tr>
+    <tr>
+        <td>Date of Birth: </td>
+        <td>@Model.DoB</td>
+    </tr>
+    <tr>
+        <td>Description: </td>
+        <td>@Model.description</td>
+    </tr>
+</table>
